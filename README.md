@@ -1,6 +1,6 @@
-#Correção da function handleCreateNewTask
-##Fazer com que a function crie uma nova task com um id random, não permita criar caso o título seja vazio
-###código
+# Correção da function handleCreateNewTask
+## Fazer com que a function crie uma nova task com um id random, não permita criar caso o título seja vazio
+### Código
   ```tsx
       if (!newTaskTitle) return; // esse if verifica a negação de newTaskTitle fazendo com que não seja possível criar tasks com o titulo vazio 
 
@@ -13,9 +13,9 @@
       setNewTaskTitle(''); //essa função resta o setNewTaskTitle para que sempre que criada uma task o input fique vazio
   ```
 
-#Correção da function handleCreateNewTask
-##Fazer com que essa function altere entre `true` ou `false` o campo `isComplete` de uma task com dado ID
-###código
+# Correção da function handleCreateNewTask
+## Fazer com que essa function altere entre `true` ou `false` o campo `isComplete` de uma task com dado ID
+### Código
 ```tsx
     function handleToggleTaskCompletion(id: number) {
         // Altere entre `true` ou `false` o campo `isComplete` de uma task com dado ID
@@ -28,9 +28,9 @@
       }
 ```
 
-#Correção da function handleRemoveTask
-##Fazer com que essa function  remova uma task da listagem pelo ID
-###código
+# Correção da function handleRemoveTask
+## Fazer com que essa function  remova uma task da listagem pelo ID
+### código
 ```tsx
     const filteredtasks = tasks.filter(task => task.id != id); //usamos const filteredtasks = tasks.filter para filtrar todos os outros itens dentro do array sendo elas as que tem o id diferente 
     setTasks(filteredtasks) // usamos o setTasks para passar um novo estado 
